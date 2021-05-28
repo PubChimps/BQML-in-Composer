@@ -2,9 +2,9 @@ import os
 import airflow
 from airflow import DAG
 from airflow.models import Variable
-from operators.fivetran import FivetranOperator
 from operators.ssh import SSHOperator
-from sensors.fivetran import FivetranSensor
+from airflow_provider_fivetran.operators.fivetran import FivetranOperator
+from airflow_provider_fivetran.sensors.fivetran import FivetranSensor
 from airflow.providers.google.cloud.operators.bigquery import BigQueryExecuteQueryOperator, BigQueryGetDataOperator
 
 DATASET_NAME = "bqml"
