@@ -5,13 +5,13 @@ example dag gets new data, aggregates it, trains (or retrains) a [ARIMA model fo
 ## Prereqs
 
 A number of requirements need to be added to run this example. In the Environment Details of your Composer instance, add the following 
-
+```
 requests
 paramiko
 sshtunnel
 airflow-provider-fivetran
 apache-airflow-backport-providers-google
-
+```
 ## Fivetran
 
 Data in this example is moved from sources to BigQuery using Fivetran for automated data ingestion via the [Fivetran Airflow Provider](https://fivetran.com/blog/announcing-the-fivetran-airflow-provider).
