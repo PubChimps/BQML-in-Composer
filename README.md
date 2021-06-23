@@ -7,6 +7,11 @@ flesh out introduction with use case, relevancy, intended audience and links to 
 
 ## Architecture
 
+
+| ![bqml_composer_architecture.png](images/bqml_composer_architecture.png) | 
+|:--:| 
+
+
 description of overall architecture
 
 table of descriptions of individual components
