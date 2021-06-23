@@ -1,8 +1,28 @@
-# BQML-in-Composer
+# Forecasting ad clicks across marketing platforms
+### using Fivetran, BigQuery ML, and Composer
 
 example dag gets new data, aggregates it, trains (or retrains) a [ARIMA model for forecasting](https://cloud.google.com/bigquery-ml/docs/arima-single-time-series-forecasting-tutorial), generates predictions with it and stores them in a separate BigQuery table before returning that table.
 
-## Prereqs
+flesh out introduction with use case, relevancy, intended audience and links to other relevant content
+
+## Architecture
+
+description of overall architecture
+
+table of descriptions of individual components
+
+## Costs
+
+links to costs breakdowns of services used 
+
+## Before you begin
+
+1. In the Google Cloud Console, on the project selector page, select or create a Google Cloud project. Go to the project selector page.
+2. Make sure that billing is enabled for your Cloud project. Learn how to confirm that billing is enabled for your project.
+3. Enable BigQuery on an existing project; BigQuery should be enabled on new projects automatically. To get started with BigQuery, see Quickstart using the Cloud Console.
+
+
+## Preparing Composer
 
 A number of requirements need to be added to run this example. In the Environment Details of your Composer instance, add the following 
 ```
@@ -12,7 +32,7 @@ sshtunnel
 airflow-provider-fivetran
 apache-airflow-backport-providers-google
 ```
-## Fivetran
+## Preparing Fivetran
 
 Data in this example is moved from sources to BigQuery using Fivetran for automated data ingestion via the [Fivetran Airflow Provider](https://fivetran.com/blog/announcing-the-fivetran-airflow-provider).
 
@@ -58,3 +78,5 @@ SELECT string(forecast_timestamp) as forecast_timestamp,
                     "confidence_interval_upper_bound 
                 "FROM ML.FORECAST(MODEL bqml.dbt_ads_airflow_model,STRUCT(30 AS horizon, 0.8 AS confidence_level));
 ```
+
+## What's next
