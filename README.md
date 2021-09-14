@@ -35,13 +35,15 @@ requests
 paramiko
 sshtunnel
 airflow-provider-fivetran
-apache-airflow-backport-providers-google
 ```
+
+The Fivetran Airflow Provider and this example will work for Composer versions 1.x and 2.x
+
 ## Preparing Fivetran
 
 Data in this example is moved from sources to BigQuery using Fivetran for automated data ingestion via the [Fivetran Airflow Provider](https://fivetran.com/blog/announcing-the-fivetran-airflow-provider).
 
-The Fivetran connectors used in this example are for LinkedIn Ads and Twitter Ads
+The Fivetran connectors used in this example are for [LinkedIn Ads](https://fivetran.com/docs/applications/linkedin-ads/setup-guide) and [Twitter Ads](https://fivetran.com/docs/applications/twitter-ads/setup-guide). The basics of concepts of this DAG will work for many Fivetran connectors, especially those with [History Mode](https://fivetran.com/docs/getting-started/feature/history-mode).
 
 ## Transformations
 
